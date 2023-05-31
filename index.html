@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth or Dare</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Wanna play fookin'<br>Truth/Dare?</h1>
+        <img id="bottleImg" src="./images/bottle2.jpg">
+    </div>
+
+    <form class="input-form" method="post" action="./gamePage.html">
+
+        <div class="name-part">
+            <label id="namesText" for="names">Type players' names below</label>
+            <input class="names" type="names" placeholder="Ex: Manoj, Harshith R A, Abhilash S" size="35">
+        </div>
+
+        <div class="select-submit-part">
+            <select>
+                <option class="ageSelect" value="Adults">Select age group</option>
+                <option class="ageSelect" value="Adults">Adults👨🏻/👩🏻</option>
+                <option class="ageSelect" value="Teens">Teens👦🏻/👧🏻 </option>
+                <option class="ageSelect" value="Kids">Kids👶🏼</option>
+            </select>
+
+            <input id="submitBtn" type="submit" value="Start the game!">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 90vh;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#bottleImg {
+    width: 300px;
+    height: auto;
+}
+
+/* .input-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.name-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+}
+
+#namesText {
+    font-size: normal;
+    font-weight: 600;
+}
+
+.names {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+.select-submit-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submitBtn,
+#spinBtn {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    color: white;
+    background-color: black;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#truthBtn,
+#dareBtn {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    color: white;
+    background-color: darkgray;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+}
+
+#restartBtn {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    color: white;
+    background-color: black;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
