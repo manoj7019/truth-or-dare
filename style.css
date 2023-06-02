@@ -46,7 +46,7 @@ h1 {
     font-weight: 600;
 }
 
-.names {
+#names {
     font-family: 'Courier New', Courier, monospace;
     margin: 5px;
 }
