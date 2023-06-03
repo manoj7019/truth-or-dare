@@ -19,6 +19,7 @@ body {
 }
 
 h1 {
+    font-weight: bolder;
     margin-bottom: 10px;
 }
 
@@ -43,11 +44,12 @@ h1 {
 
 #namesText {
     font-size: normal;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 #names {
     font-family: 'Courier New', Courier, monospace;
+    height: 22px;
     margin: 5px;
 }
 
@@ -70,12 +72,20 @@ h1 {
     text-align: center;
 }
 
+#outputName,
+#truthDareQn {
+    font-size: 30px;
+    font-weight: 900;
+    color: red;
+    margin: 0px 20px 20px 20px;
+}
+
 #truthBtn,
 #dareBtn {
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
     color: white;
-    background-color: darkgray;
+    background-color: red;
     border-style: none;
     border-radius: 5px;
     font-size: 25px;

@@ -17,18 +17,17 @@
 
         <div class="name-part">
             <label id="namesText" for="names">Type players' names below</label>
-            <input id="names" name="names" type="text" placeholder="Ex: Manoj, Harshith R A, Abhilash S" size="35">
+            <input id="names" name="names" type="text" placeholder="Ex: Manoj, Harshith R A, Abhilash S" size="35" onkeyup="enableSubmit()">
         </div>
 
         <div class="select-submit-part">
             <select name="ageGroup" id="ageGroup">
-                <option class="ageSelect" value="Adults">Select age group</option>
-                <option class="ageSelect" value="Adults">Adults👨🏻/👩🏻</option>
-                <option class="ageSelect" value="Teens">Teens👦🏻/👧🏻 </option>
-                <option class="ageSelect" value="Kids">Kids👶🏼</option>
+                <option class="ageSelect" value="0">Age group</option>
+                <option class="ageSelect" value="Adults">Adults 🍺</option>
+                <option class="ageSelect" value="Kids">Kids 🍼</option>
             </select>
 
-            <input id="submitBtn" type="button" value="Start the game!" onclick="submitForm(); setNames();">
+            <input id="submitBtn" type="button" value="Start the game!" onclick="submitForm(); setNames();" disabled>
         </div>
     </form>
 

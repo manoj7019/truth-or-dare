@@ -11,7 +11,7 @@
     <div class="head">
         <h1>Let's play!</h1>
         <h3>Click the button to spin the bottle</h3>
-        <input id="spinBtn" type="button" value="Click me to spin" onclick="getNames();">
+        <input id="spinBtn" type="button" value="Get player name" onclick="getNames();">
     </div>
 
     <div class="output-name">
@@ -19,16 +19,16 @@
     </div>
 
     <div class="truth-dare">
-        <button id="truthBtn">TRUTH</button>
-        <button id="dareBtn">DARE</button>
+        <button id="truthBtn" onclick="getTruthQn();">TRUTH</button>
+        <button id="dareBtn" onclick="getDareQn();">DARE</button>
     </div>
 
     <div class="output-truth-dare">
-        <p id="truthdareQn"></p>
+        <p id="truthDareQn"></p>
     </div>
 
     <div class="click-instruction">
-        <p>Click 'TRUTH' or 'DARE' button again if the question is repeated.</p>
+        <p>Click again if the question is repeated.</p>
     </div>
 
     <div class="restart">
