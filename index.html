@@ -8,28 +8,35 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="head">
-        <h1>Wanna play fookin'<br>Truth/Dare<br>with your friends?</h1>
+    <div class="header">
+        <h1>Wanna play fookin'<br>Truth/Dare<br>with friends?</h1>
         <img id="bottleImg" src="./images/bottle2.jpg">
     </div>
 
     <form id="submitForm" method="get" action="./gamePage.html">
 
         <div class="name-part">
-            <label id="namesText" for="names">Type players' names below</label>
-            <input id="names" name="names" type="text" placeholder="Ex: Manoj, Harshith R A, Abhilash S" size="35" onkeyup="enableSubmit()">
+            <label id="namesText" for="names">Type players' names below<br>seperated by commas(,)</label>
+            <input id="names" name="names" type="text" placeholder="Ex: Manoj,Harshith R A,Abhilash S" size="35" onkeyup="enableSubmit();">
         </div>
 
         <div class="select-submit-part">
-            <select name="ageGroup" id="ageGroup">
-                <option class="ageSelect" value="0">Age group</option>
-                <option class="ageSelect" value="Adults">Adults 🍺</option>
-                <option class="ageSelect" value="Kids">Kids 🍼</option>
+            <select name="ageSelect" id="ageSelect">
+                <option value="0">Select Age</option>
+                <option value="Adults">Adults 🍺</option>
+                <option value="Kids">Kids 🍼</option>
             </select>
 
-            <input id="submitBtn" type="button" value="Start the game!" onclick="submitForm(); setNames();" disabled>
+            <input id="submitBtn" type="button" value="Start the game!" onclick="submitForm(); setNames(); setValue();" disabled>
+
+            <p id="valueOutput"></p>
         </div>
     </form>
+
+    <div class="footer">
+        <p id="footerText">Copyright © 2023. Developed by manoj7019</p>
+        <a href="https://github.com/manoj7019"><img id="githubIcon" src="./images/github-logo.png"/></a>
+    </div>
 
     <script src="./script.js"></script>
 </body>

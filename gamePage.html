@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="head">
+    <div class="header">
         <h1>Let's play!</h1>
-        <h3>Click the button to spin the bottle</h3>
-        <input id="spinBtn" type="button" value="Get player name" onclick="getNames();">
+        <p id="valueOutput"></p>
+        <h3>Click the button below to start</h3>
+        <input id="spinBtn" type="button" value="Get player name" onclick="getNames(); playSpin();">
     </div>
 
     <div class="output-name">
         <p id="outputName"></p>
     </div>
 
+    <p id="selectTD"></p>
+
     <div class="truth-dare">
-        <button id="truthBtn" onclick="getTruthQn();">TRUTH</button>
-        <button id="dareBtn" onclick="getDareQn();">DARE</button>
+        <!--<button id="truthBtn" onclick="getTruthQn();">Truth</button>
+        <button id="dareBtn" onclick="getDareQn();">Dare</button>-->
+        <input type="image" src="./images/truthIcon.jpg" id="truthBtn" onclick="getTruthQn(); playTruthDare();" />
+        <input type="image" src="./images/dareIcon.jpg" id="dareBtn" onclick="getDareQn(); playTruthDare();" />
     </div>
 
     <div class="output-truth-dare">
@@ -31,10 +36,13 @@
         <p>Click again if the question is repeated.</p>
     </div>
 
-    <div class="restart">
-        <button id="restartBtn">Spin again!</button>
+    <div class="footer">
+        <p id="footerText">Copyright © 2023. Developed by manoj7019</p>
+        <a href="https://github.com/manoj7019"><img id="githubIcon" src="./images/github-logo.png"/></a>
     </div>
 
+    <audio id="player" src="./sounds/spinButton.mp3"></audio>
+    <audio id="truthDare" src="./sounds/truthDareBtn.mp3"></audio>
     <script src="./script.js"></script>
 </body>
 </html>

@@ -30,96 +30,70 @@ function setNames() {
 
 function getNames() {
     let names = localStorage.getItem('names');
-    array = names.split(', ');
+    array = names.split(',');
     playerName = array[Math.floor(Math.random() * array.length)];
     console.log(playerName);
-    output.textContent = `"${playerName}"`;
+    output.textContent = `${playerName.toUpperCase()}`;
+    tDoutput.textContent = `Choose 'Truth' or 'Dare'`;
 };
 
-const kidsTruth = [ 'King Kong (1933)',
-'Citizen Kane (1941)',
-'Vertigo (1958)',
-'The Third Man (1949)',
-'Floating Weeds (1959)',
-'Casablanca (1942)',
-'Singin\' in the Rain (1952)',
-'Tokyo Story (1953)',
-'Raging Bull (1980)',
-'2001: A Space Odyssey (1968)',
-'La Dolce Vita (1960)',
-'Apocalypse Now (1979)',
-'Aguirre: The Wrath of God (1972)',
-'The General (1926)',
-'The Tree of Life (2011)',
-'The Decalogue (1989)',
-'Synecdoche, New York (2008)'];
+const kidsTruth = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
-const kidsDare = [ 'King Kong (1933)',
-'Citizen Kane (1941)',
-'Vertigo (1958)',
-'The Third Man (1949)',
-'Floating Weeds (1959)',
-'Casablanca (1942)',
-'Singin\' in the Rain (1952)',
-'Tokyo Story (1953)',
-'Raging Bull (1980)',
-'2001: A Space Odyssey (1968)',
-'La Dolce Vita (1960)',
-'Apocalypse Now (1979)',
-'Aguirre: The Wrath of God (1972)',
-'The General (1926)',
-'The Tree of Life (2011)',
-'The Decalogue (1989)',
-'Synecdoche, New York (2008)'];
+const kidsDare = ['z', 'y', 'x', 'w', 'v', 'u', 't'];
 
-const adultsTruth = [ 'King Kong (1933)',
-'Citizen Kane (1941)',
-'Vertigo (1958)',
-'The Third Man (1949)',
-'Floating Weeds (1959)',
-'Casablanca (1942)',
-'Singin\' in the Rain (1952)',
-'Tokyo Story (1953)',
-'Raging Bull (1980)',
-'2001: A Space Odyssey (1968)',
-'La Dolce Vita (1960)',
-'Apocalypse Now (1979)',
-'Aguirre: The Wrath of God (1972)',
-'The General (1926)',
-'The Tree of Life (2011)',
-'The Decalogue (1989)',
-'Synecdoche, New York (2008)'];
+const adultsTruth = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-const adultsDare = [ 'King Kong (1933)',
-'Citizen Kane (1941)',
-'Vertigo (1958)',
-'The Third Man (1949)',
-'Floating Weeds (1959)',
-'Casablanca (1942)',
-'Singin\' in the Rain (1952)',
-'Tokyo Story (1953)',
-'Raging Bull (1980)',
-'2001: A Space Odyssey (1968)',
-'La Dolce Vita (1960)',
-'Apocalypse Now (1979)',
-'Aguirre: The Wrath of God (1972)',
-'The General (1926)',
-'The Tree of Life (2011)',
-'The Decalogue (1989)',
-'Synecdoche, New York (2008)'];
+const adultsDare = ['Z', 'Y', 'X', 'W', 'V', 'U', 'T'];
 
 // const ageGroup = document.getElementById()
 
-let QnOutput = document.querySelector('#truthDareQn');
+const tDoutput = document.querySelector('#selectTD');
+const qnOutput = document.querySelector('#truthDareQn');
+
+const ageSelect = document.getElementById('ageSelect');
+
+function setValue() {
+    const selectedAge = ageSelect.value;
+    localStorage.setItem('selectedValue', selectedAge);
+    // window.location.href = 'gamePage.html';
+};
 
 function getTruthQn() {
-    let truthQn = adultsTruth[Math.floor(Math.random() * adultsTruth.length)];
-    QnOutput.textContent = `${truthQn}`;
+    const selectedAge = localStorage.getItem('selectedValue');
+    console.log(selectedAge);
+    let adultsTruthQn = adultsTruth[Math.floor(Math.random() * adultsTruth.length)];
+    let kidsTruthQn = kidsTruth[Math.floor(Math.random() * kidsTruth.length)];
+
+    if(selectedAge === 'Adults') {
+        qnOutput.textContent = `"${adultsTruthQn}"`;
+    } else if (selectedAge === 'Kids') {
+        qnOutput.textContent = `"${kidsTruthQn}"`;
+    } else {
+        qnOutput.textContent = `Go select`;
+    }
 }
 
 function getDareQn() {
-    let DareQn = adultsDare[Math.floor(Math.random() * adultsTruth.length)];
-    QnOutput.textContent = `${DareQn}`;
+    const selectedAge = localStorage.getItem('selectedValue');
+    console.log(selectedAge);
+    let adultsDareQn = adultsDare[Math.floor(Math.random() * adultsDare.length)];
+    let kidsDareQn = kidsDare[Math.floor(Math.random() * kidsDare.length)];
+
+    if(selectedAge === 'Adults') {
+        qnOutput.textContent = `"${adultsDareQn}"`;
+    } else if (selectedAge === 'Kids') {
+        qnOutput.textContent = `"${kidsDareQn}"`;
+    } else {
+        qnOutput.textContent = `Go select`;
+    }
 }
 
+function playSpin() {
+    let spin = document.querySelector('#player');
+    spin.play();
+}
 
+function playTruthDare() {
+    let truthOrDare = document.querySelector('#truthDare');
+    truthOrDare.play();
+}

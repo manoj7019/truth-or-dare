@@ -7,15 +7,16 @@ body {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    max-height: 90vh;
+    max-height: 100vh;
 }
 
-.head {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 40px 25px 25px 25px;
 }
 
 h1 {
@@ -45,12 +46,13 @@ h1 {
 #namesText {
     font-size: normal;
     font-weight: 900;
+    /* margin-bottom: 10px; */
 }
 
 #names {
     font-family: 'Courier New', Courier, monospace;
     height: 22px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .select-submit-part {
@@ -62,7 +64,8 @@ h1 {
 #submitBtn,
 #spinBtn {
     font-family: 'Courier New', Courier, monospace;
-    margin: 20px;
+    margin: 25px 20px 0px 20px;
+    padding: 5px 10px 5px 10px;
     color: white;
     background-color: black;
     border-style: none;
@@ -72,26 +75,41 @@ h1 {
     text-align: center;
 }
 
-#outputName,
+#outputName {
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    margin: 0px 20px 20px 20px;
+}
+
+#selectTD {
+    margin: 10px 10px 0px 10px;
+    font-size: large;
+    font-weight: bolder;
+    color: black;
+}
+
 #truthDareQn {
     font-size: 30px;
     font-weight: 900;
-    color: red;
+    color: black;
     margin: 0px 20px 20px 20px;
 }
 
 #truthBtn,
 #dareBtn {
-    font-family: 'Courier New', Courier, monospace;
+    width: 150px;
+    height: auto;
     margin: 20px;
-    color: white;
-    background-color: red;
-    border-style: none;
-    border-radius: 5px;
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
     padding: 5px 10px 5px 10px;
+}
+
+#truthBtn {
+    margin-right: 10px;
+}
+
+#dareBtn {
+    margin-left: 10px;
 }
 
 #restartBtn {
@@ -104,4 +122,28 @@ h1 {
     font-size: 25px;
     font-weight: 600;
     text-align: center;
+}
+
+.click-instruction {
+    margin: 20px;
+    font-weight: bolder;
+    color: darkgray;
+}
+
+.footer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerText {
+    font-size: 12px;
+}
+
+#githubIcon {
+    margin-left: 5px;
+    width: 10px;
+    height: auto;
 }
