@@ -64,14 +64,14 @@ h1 {
 #submitBtn,
 #spinBtn {
     font-family: 'Courier New', Courier, monospace;
-    margin: 25px 20px 0px 20px;
+    margin: 20px 20px 0px 20px;
     padding: 5px 10px 5px 10px;
     color: white;
     background-color: black;
     border-style: none;
     border-radius: 5px;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 900;
     text-align: center;
 }
 
@@ -90,10 +90,10 @@ h1 {
 }
 
 #truthDareQn {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 900;
     color: black;
-    margin: 0px 20px 20px 20px;
+    margin: 20px 35px 20px 35px;
 }
 
 #truthBtn,
@@ -101,7 +101,7 @@ h1 {
     width: 150px;
     height: auto;
     margin: 20px;
-    padding: 5px 10px 5px 10px;
+    /* padding: 5px 10px 5px 10px; */
 }
 
 #truthBtn {
@@ -131,7 +131,7 @@ h1 {
 }
 
 .footer {
-    margin-top: 80px;
+    margin: 50px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
