@@ -33,7 +33,7 @@ function getNames() {
     array = names.split(',');
     playerName = array[Math.floor(Math.random() * array.length)];
     console.log(playerName);
-    output.textContent = `["${(playerName.toUpperCase()).trim()}"]`;
+    output.textContent = `✨ ${(playerName.toUpperCase()).trim()} ✨`;
     tDoutput.textContent = `Choose 'Truth' or 'Dare'`;
 };
 
@@ -753,7 +753,7 @@ function getTruthQn() {
     } else if (selectedAge === 'Kids') {
         qnOutput.textContent = `"${kidsTruthQn}"`;
     } else {
-        qnOutput.textContent = `Go select 'Singles' or 'Couples'.`;
+        qnOutput.textContent = `Go back and select 'What are you?'.`;
     }
 }
 
@@ -768,16 +768,18 @@ function getDareQn() {
     } else if (selectedAge === 'Kids') {
         qnOutput.textContent = `"${kidsDareQn}"`;
     } else {
-        qnOutput.textContent = `Go select 'Singles' or 'Couples'.`;
+        qnOutput.textContent = `Go back and select 'What are you?'.`;
     }
 }
 
 function playSpin() {
     let spin = document.querySelector('#player');
+    spin.currentTime = 0;
     spin.play();
 }
 
 function playTruthDare() {
     let truthOrDare = document.querySelector('#truthDare');
+    truthOrDare.currentTime = 0;
     truthOrDare.play();
 }
