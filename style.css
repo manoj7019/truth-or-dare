@@ -99,7 +99,11 @@ h1 {
     width: 130px;
     height: auto;
     margin: 20px;
-    /* padding: 5px 10px 5px 10px; */
+}
+
+#truthBtn:active,
+#dareBtn:active {
+    transform: scale(0.95);
 }
 
 #truthBtn {
